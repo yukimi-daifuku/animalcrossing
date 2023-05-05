@@ -3,8 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-  Hello, World!
+  <table id="pref_table">
+	<thead>
+		<tr>
+			<th>名前</th>
+			<th>値段</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>北海道</td>
+			<td>5,352,000</td>
+		</tr>
+		<tr>
+			<td>青森県</td>
+			<td>1,293,000</td>
+		</tr>
+		<tr>
+			<td>岩手県</td>
+			<td>1,268,000</td>
+		</tr>
+		<tr>
+			<td>宮城県</td>
+			<td>2,330,000</td>
+		</tr>
+		<tr>
+			<td>秋田県</td>
+			<td>1,010,000</td>
+		</tr>
+		<tr>
+			<td>山形県</td>
+			<td>1,113,000</td>
+		</tr>
+		<tr>
+			<td>福島県</td>
+			<td>1,901,000</td>
+		</tr>
+	</tbody>
+</table>
 </body>
+<script type="text/javascript">
+$(function(){
+    $('#pref_table').DataTable();
+    $.get("data.json", function(data){ 
+	    var hoge = $.parseJSON(data); 
+        console.log(hoge);
+    }); 
+});
+
+  </script>
 </html>
+
