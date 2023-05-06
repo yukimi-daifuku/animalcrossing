@@ -25,23 +25,19 @@ div#table_paginate {
 
 @media screen and (min-width: 481px) {
 	/* 481px以上に適用されるCSS（タブレット用） */
-    body {
-        font-size: 10px
-    }
-
-    div#table_filter {
-        width: 99%;
-    }
-
-    div#table_filter input {
-        width: 90vw;
-    }
-
-    div#table_paginate {
-        width: 100vw;
-    }
 }
 
 @media screen and (min-width: 960px) {
 	/* 960px以上に適用されるCSS（PC用） */
+    body {
+        font-size: 16px
+    }
+    
+    div#table_filter {
+        width: auto;
+    }
+    
+    div#table_filter input {
+        width: auto;
+    }
 }
